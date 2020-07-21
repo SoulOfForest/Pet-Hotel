@@ -1,0 +1,12 @@
+.ui.segment {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition: .2s all ease-in;
+}
+
+.ui.segment.active {
+    opacity: 1;
+    visibility: visible;
+}
+

@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../../images/bg5.jpg'); */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, right top, from(#08aeea), to(#b721ff));
+    background: -webkit-linear-gradient(bottom left, #08aeea 0%, #b721ff 100%);
+    position: relative;
+}
+
+.register-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 100px 20px; */
+    background-color: transparent;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    margin: 30px 0px;
+}
+
+.register__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.register__form h3 {
+    width: 100%;
+    padding: 20px 0px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.form-group {
+    /* border-bottom: 2px solid #d9d9d9; */
+    margin: 25px 0px;
+    padding: 10px 0px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.group-input-spe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    grid-gap: 0px 20px;
+} 
+
+.group-input-desc input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.group-input-desc label {
+    color: #999;
+}
+
+.group-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+
+.group-checkbox .group-input-desc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.group-checkbox .group-input-desc input[type=radio] {
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.group-checkbox .group-input-desc label {
+    color: black;
+}
+
+.form-group .group-input {
+    width: 80%;
+/*    position: relative;*/
+}
+
+.form-group .group-input i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-group > .group-name {
+    margin-right: 10px;
+    width: 140px;
+}
+
+.form-group .login__input, .form-group select {
+    background: transparent;
+    font-size: 16px;
+    padding: 15px;
+    width: 100%;
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 6px;
+    color: #555;
+}
+
+.form-group select:focus {
+    outline: none;
+}
+
+.form-group select option {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px 0px;
+}
+
+.login__input:focus {
+    outline: none;
+}
+button[type="submit"] {
+    background: #ff4b5a;
+    color: white;
+    padding: 0px 50px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    line-height: 50px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: .4s all ease-in;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #d92938;
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+.login-account {
+    margin: 30px 0px;
+}
+
+.login-account a {
+    color: black;
+    font-weight: bold;
+}
+
+
+.form-group-error {
+    position: absolute;
+    bottom: -18px;
+    color: red;
+    left: 150px;
+}

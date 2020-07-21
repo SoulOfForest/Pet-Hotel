@@ -1,0 +1,10 @@
+.form-field .group-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-field {
+    grid-template-columns: 2fr 6fr !important;
+}

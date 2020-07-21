@@ -1,0 +1,563 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 7, 2020, 1:12:50 AM
+    Author     : ViruSs0209
+*/
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 7, 2020, 1:11:39 AM
+    Author     : ViruSs0209
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --theme: rgb(160, 217, 17);
+}
+
+.dropdown{
+    width: 10% !important;
+    text-align: center !important;
+}
+
+.dropdown>.left.menu {
+    left: auto!important;
+    right: 0!important;
+    top: 35px !important;
+}
+
+.dropdown .item {
+    display: flex !important;
+    align-items: center;
+}
+
+.dropdown .item svg {
+    margin-right: 10px;
+}
+
+.page-wrapper {
+    display: flex;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ui.menu.side {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(65, 67, 69, 0.15);
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    transition: .2s all ease-in;
+    border-bottom: none;
+}
+
+.ui.menu.side {
+    margin-left: -250px;
+}
+
+.ui.menu.side.active {
+    margin-left: 0;
+}
+
+.ui.menu.side .item {
+    padding: 15px 20px;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center !important;
+}
+
+.ui.menu.side .item:not(.active):hover {
+    background: none !important;
+}
+
+.ui.menu.side .item::before {
+    height: 0;
+}
+
+.ui.menu.side .item.active {
+    border-right: 2.5px solid var(--theme);
+    background-color: #fcffe6;
+    color: var(--theme);
+}
+
+.ui.menu.side .item.active:hover {
+    background: #fcffe6;
+}
+
+.ui.menu.side .item.active > svg, .ui.menu.side .item:hover svg {
+    fill: var(--theme);
+}
+
+.ui.menu.side .item:hover {
+    color: var(--theme) !important;
+}
+
+.ui.menu.side .item:hover > img {
+    filter: saturate(3);
+    -webkit-filter: saturate(3);
+}
+
+.sidebar-header {
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Parisienne', cursive;
+    margin-bottom: 0;
+}
+
+.sidebar-header svg {
+    margin-bottom: 15px;
+    fill: #009688;
+}
+
+.ui.menu.side .item > svg {
+    margin-right: 10px;
+}
+
+
+.layout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.toggle-sidebar > input[type=checkbox] {
+    margin-top: 20px;
+    position: relative;
+    -webkit-appearance: none;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #c6c6c6;
+    outline: none;
+    transition: .2 all ease-in;
+    margin-left: 20px;
+    bottom: 10px;
+}
+
+.toggle-sidebar > input[type=checkbox]:before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 20px;
+    transform: scale(1.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
+    transition: .3s;
+}
+
+.toggle-sidebar > input[type=checkbox]:checked {
+    background-color: #1dc7fe;
+}
+
+.toggle-sidebar > input[type=checkbox]:checked:before {
+    left: 30px;
+}
+
+.user-info {
+    margin-right: 20px;
+}
+
+.user-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    cursor: pointer;
+    transition: .2s all ease-in;
+}
+
+.user-dropdown .text {
+    font-weight: bold;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.user-avatar img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.ui.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.layout-content {
+    width: 100%;
+    background: #f0f2f5;
+    padding: 30px;
+}
+
+.layout-content .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-content .ui.services {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif !important;
+    padding: 30px;
+}
+.layout-content .ui.services h3 {
+    font-size: 25px;
+    color: black;
+}
+
+.ui.utilities {
+    margin: 40px 0px;
+}
+
+.ui.utilities > .ui.button {
+    background: var(--theme);
+    color: white;
+    font-weight: 300;
+    transition: .2s all ease-in;
+}
+
+.ui.utilities > .ui.button:not(button):hover {
+    filter: brightness(1.2);
+}
+
+.ui.utilities > .ui.button > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ui.utilities > .ui.button.disabled {
+    pointer-events: none !important;
+    background-color: #d9d9d9 !important;
+    cursor: not-allowed !important;
+}
+
+.ui.utilities > .ui.button svg {
+    margin-right: 10px;
+    fill: white;
+    transition: .2s all ease-in;
+}
+
+.ui.utilities > button, .ui.utilities > .ui.button.normal {
+    background: none !important;
+    color: black !important;
+    border: 1px solid #d9d9d9;
+    transition: .2s all ease-in;
+}
+
+.ui.utilities > button svg, .ui.utilities > .ui.button.normal svg {
+    fill: black !important;
+}
+
+.ui.utilities > .ui.button.normal:hover svg, .ui.utilities > button:hover svg {
+    fill: var(--theme) !important;
+}
+
+.ui.utilities > .ui.button.normal:hover, .ui.utilities > button:hover {
+    color: var(--theme) !important;
+    border-color: var(--theme) !important;
+}
+
+.view-users {
+    display: flex;
+    align-items: center;
+}
+
+.view-util {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.view-util button {
+    background: none;
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display:inline-block;   
+    width: 80px;
+}
+
+.view-util button.enabled {
+    border-color: var(--theme);
+    color: var(--theme);
+}
+
+.view-util button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    float: left;
+}
+
+.view-util button:last-child {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    float: left;
+}
+
+
+.view-util button:focus {
+    outline: none;
+}
+
+.user-search {
+    margin-top: 30px;
+    border: 1px solid #d9d9d9;
+    padding: 30px;
+}
+
+.user-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px 30px;
+}
+.form-field {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.form-field div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-field div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-field div input {
+    width: 100%;
+}
+
+.form-field input, .form-field textarea {
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    border-radius: 5px;
+    transition: .2s all ease-in;
+}
+
+.form-field input:focus, .form-field textarea:focus {
+    outline: none;
+    border-color: var(--theme);
+}
+
+.form-field input:hover {
+    border-color: var(--theme);  
+}
+
+.form-action {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.form-action > .btn-action {
+    background-color: var(--theme);
+    border: 1px solid #d9d9d9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s all ease-in;
+    margin: 0px 5px;
+} 
+
+.form-action > .btn-action:focus {
+    outline: none;
+}
+
+.form-action > .btn-action div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-action > .btn-action span {
+    margin-left: 10px;
+}
+
+.search-action {
+    color: #fff;
+}
+
+.search-action:hover {
+    filter: brightness(1.2);
+}
+
+.search-action svg {
+    fill: white;
+    transition: .2s all ease-in;
+}
+
+.reset-action {
+    background-color: transparent !important;
+}
+
+.reset-action svg {
+    transition: .2s all ease-in;
+}
+
+.reset-action > div {
+    transition: .2s all ease-in;
+}
+
+.reset-action > div:hover svg {
+    fill: var(--theme) !important;
+}
+
+.reset-action > div:hover {
+    border-color: var(--theme);
+    color: var(--theme);
+}
+
+.search-display {
+    margin-top: 30px;
+}
+
+.search-display table td, th {
+    text-align: center !important;
+    transition: .2s all ease-in;
+}
+
+.search-display table td img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.search-display table td input, .search-display table th input {
+    cursor: pointer;
+}
+
+.search-display table td span {
+    font-size: 13px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.search-display table td span.enabled {
+    color: #52c41a;
+    background-color: #f6ffed;
+    border-color: #b7eb8f;
+}
+
+.search-display table td span.disabled {
+    color: #f5222d;
+    background: #fff1f0;
+    border-color: #ffa39e;
+}
+
+.search-display table tr {
+    transition: .2s all ease-in;
+}
+
+.search-display table tr.checked {
+    background-color: #fafafa;
+}
+
+.search-display table td a {
+    color: var(--theme);
+    margin: 5px;
+}
+
+.pagnination-search {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.page:focus {
+    outline: none;
+}
+
+.ui.breadcrumb {
+    display: flex !important;
+    justify-content: flex-start;
+    /* display: inline-block; */
+    align-items: center;
+}
+
+.ui.breadcrumb svg {
+    margin: 0px 8px;
+}
+
+.ui.breadcrumb svg path {
+    fill: #03e3ff !important;
+}
+
+
+.ui.table {
+    box-shadow: 1px 2px 4px black !important;
+}
+.ui.table td {
+    padding: 10px;
+}
+td[data-label=Actions] a{
+   margin: 0px 10px !important;
+}
+
+td[data-label=Actions] a svg {
+    transition: .2s all ease-in;
+}
+td[data-label=Actions] a:hover svg {
+    fill: var(--theme);
+}
+.ui.breadcrumb a {
+    font-style: italic;
+    font-size: 15px;
+}
+
+tbody tr:hover td {
+    background-color: #fcffe6;
+}
+.ui.services h4 svg {
+        fill: var(--theme);
+    }
